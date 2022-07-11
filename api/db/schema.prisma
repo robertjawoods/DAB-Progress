@@ -1,0 +1,65 @@
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = "native"
+}
+
+model User {
+  id                  Int                   @id
+  email               String                @unique
+  LessonsCompleted    LessonsCompleted[]
+  HomeworkCompleted   HomeworkCompleted[]
+  ChallengesCompleted ChallengesCompleted[]
+}
+
+model Lesson {
+  id               Int                @id @default(autoincrement())
+  name             String
+  index            Int
+  LessonsCompleted LessonsCompleted[]
+}
+
+model Homework {
+  id                Int                 @id @default(autoincrement())
+  name              String
+  HomeworkCompleted HomeworkCompleted[]
+}
+
+model Challenge {
+  id                  Int                   @id @default(autoincrement())
+  name                String
+  ChallengesCompleted ChallengesCompleted[]
+}
+
+model LessonsCompleted {
+  id             Int       @id @default(autoincrement())
+  user           User      @relation(fields: [userId], references: [id])
+  lesson         Lesson    @relation(fields: [lessonId], references: [id])
+  watchedVideo   Boolean
+  readText       Boolean
+  completionDate DateTime?
+  userId         Int
+  lessonId       Int
+}
+
+model HomeworkCompleted {
+  id                 Int       @id @default(autoincrement())
+  user               User      @relation(fields: [userId], references: [id])
+  homework           Homework  @relation(fields: [homeworkId], references: [id])
+  lastCompletionDate DateTime?
+  userId             Int
+  homeworkId         Int
+}
+
+model ChallengesCompleted {
+  id             Int       @id @default(autoincrement())
+  challenge      Challenge @relation(fields: [challengeId], references: [id])
+  user           User      @relation(fields: [userId], references: [id])
+  completedCount Int       @default(0)
+  challengeId    Int
+  userId         Int
+}
