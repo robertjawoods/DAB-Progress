@@ -5505,6 +5505,85 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@sentry/browser@npm:7.6.0":
+  version: 7.6.0
+  resolution: "@sentry/browser@npm:7.6.0"
+  dependencies:
+    "@sentry/core": 7.6.0
+    "@sentry/types": 7.6.0
+    "@sentry/utils": 7.6.0
+    tslib: ^1.9.3
+  checksum: 40783f1106a0ef021be79199058e68f15a48b6c9ccc13234f4c00f8e29d123140b08112beca061a8d1cd58049ace1516ddce3370c6ea0a9837895270b11ec196
+  languageName: node
+  linkType: hard
+
+"@sentry/core@npm:7.6.0":
+  version: 7.6.0
+  resolution: "@sentry/core@npm:7.6.0"
+  dependencies:
+    "@sentry/hub": 7.6.0
+    "@sentry/types": 7.6.0
+    "@sentry/utils": 7.6.0
+    tslib: ^1.9.3
+  checksum: b6886a3cff3ecf3a917b6fe448ca9c367cde55ccb34eea13555e2a12dd529c34252a6c346630a76b2bdcfbb8956396c606f0937bd057a23a5e1e653da830063b
+  languageName: node
+  linkType: hard
+
+"@sentry/hub@npm:7.6.0":
+  version: 7.6.0
+  resolution: "@sentry/hub@npm:7.6.0"
+  dependencies:
+    "@sentry/types": 7.6.0
+    "@sentry/utils": 7.6.0
+    tslib: ^1.9.3
+  checksum: f455d4a4fe83af1b97ef65c620f4cbe84b4d831a81ef4b4134d001366f9f8cf1470793c34983fa36a740de6679a5b072094a08a8b25d7a0efd8bad83b760cc46
+  languageName: node
+  linkType: hard
+
+"@sentry/react@npm:^7.6.0":
+  version: 7.6.0
+  resolution: "@sentry/react@npm:7.6.0"
+  dependencies:
+    "@sentry/browser": 7.6.0
+    "@sentry/types": 7.6.0
+    "@sentry/utils": 7.6.0
+    hoist-non-react-statics: ^3.3.2
+    tslib: ^1.9.3
+  peerDependencies:
+    react: 15.x || 16.x || 17.x || 18.x
+  checksum: 388ceac9db1d4d870d6a8bba6cf1c3f0c31a225759c7daf150ead233f5b54360541c84a52cf5d6d30a783ae9c050f2fb29c6844853155e57601a927d5600e51f
+  languageName: node
+  linkType: hard
+
+"@sentry/tracing@npm:^7.6.0":
+  version: 7.6.0
+  resolution: "@sentry/tracing@npm:7.6.0"
+  dependencies:
+    "@sentry/hub": 7.6.0
+    "@sentry/types": 7.6.0
+    "@sentry/utils": 7.6.0
+    tslib: ^1.9.3
+  checksum: feeb39858c0ec492c0a859ca607387ec2a8c1329eaec7aa4bfb6829f41fedec3c58520831897b723f073cea90f704ab7de085a5893cfd8591a33039e2ccb87b0
+  languageName: node
+  linkType: hard
+
+"@sentry/types@npm:7.6.0":
+  version: 7.6.0
+  resolution: "@sentry/types@npm:7.6.0"
+  checksum: e8a1e841d4d6f07ee58dfb1370f4bced8198d44d722155435ad4e8e9f9397ab129e3563406891aa37f616df64c4de6cbab3c2c776aeca7dcc25a7ff821e90f8c
+  languageName: node
+  linkType: hard
+
+"@sentry/utils@npm:7.6.0":
+  version: 7.6.0
+  resolution: "@sentry/utils@npm:7.6.0"
+  dependencies:
+    "@sentry/types": 7.6.0
+    tslib: ^1.9.3
+  checksum: 8bc6429b4940e26a45f42fcb2b869fe76e36c6f5bfd7befa05cb24d998fd4cb2dcc43b298bf082f0697da9a9cd95a94722b89337ce0e3b7c4461b8ed9546c915
+  languageName: node
+  linkType: hard
+
 "@sinclair/typebox@npm:^0.23.3":
   version: 0.23.5
   resolution: "@sinclair/typebox@npm:0.23.5"
@@ -8448,6 +8527,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@yarnpkg/lockfile@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "@yarnpkg/lockfile@npm:1.1.0"
+  checksum: 0bfa50a3d756623d1f3409bc23f225a1d069424dbc77c6fd2f14fb377390cd57ec703dc70286e081c564be9051ead9ba85d81d66a3e68eeb6eb506d4e0c0fbda
+  languageName: node
+  linkType: hard
+
 "abab@npm:^2.0.3, abab@npm:^2.0.5":
   version: 2.0.6
   resolution: "abab@npm:2.0.6"
@@ -10512,7 +10598,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chalk@npm:^2.0.0, chalk@npm:^2.4.1":
+"chalk@npm:^2.0.0, chalk@npm:^2.4.1, chalk@npm:^2.4.2":
   version: 2.4.2
   resolution: "chalk@npm:2.4.2"
   dependencies:
@@ -11628,7 +11714,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cross-spawn@npm:^6.0.0":
+"cross-spawn@npm:^6.0.0, cross-spawn@npm:^6.0.5":
   version: 6.0.5
   resolution: "cross-spawn@npm:6.0.5"
   dependencies:
@@ -14661,6 +14747,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"find-yarn-workspace-root@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "find-yarn-workspace-root@npm:2.0.0"
+  dependencies:
+    micromatch: ^4.0.2
+  checksum: b0d3843013fbdaf4e57140e0165889d09fa61745c9e85da2af86e54974f4cc9f1967e40f0d8fc36a79d53091f0829c651d06607d552582e53976f3cd8f4e5689
+  languageName: node
+  linkType: hard
+
 "findup-sync@npm:5.0.0":
   version: 5.0.0
   resolution: "findup-sync@npm:5.0.0"
@@ -14908,6 +15003,17 @@ __metadata:
     jsonfile: ^6.0.1
     universalify: ^2.0.0
   checksum: 5f579466e7109719d162a9249abbeffe7f426eb133ea486e020b89bc6d67a741134076bf439983f2eb79276ceaf6bd7b7c1e43c3fd67fe889863e69072fb0a5e
+  languageName: node
+  linkType: hard
+
+"fs-extra@npm:^7.0.1":
+  version: 7.0.1
+  resolution: "fs-extra@npm:7.0.1"
+  dependencies:
+    graceful-fs: ^4.1.2
+    jsonfile: ^4.0.0
+    universalify: ^0.1.0
+  checksum: 1943bb2150007e3739921b8d13d4109abdc3cc481e53b97b7ea7f77eda1c3c642e27ae49eac3af074e3496ea02fde30f411ef410c760c70a38b92e656e5da784
   languageName: node
   linkType: hard
 
@@ -18163,6 +18269,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"jsonfile@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "jsonfile@npm:4.0.0"
+  dependencies:
+    graceful-fs: ^4.1.6
+  dependenciesMeta:
+    graceful-fs:
+      optional: true
+  checksum: 7dc94b628d57a66b71fb1b79510d460d662eb975b5f876d723f81549c2e9cd316d58a2ddf742b2b93a4fa6b17b2accaf1a738a0e2ea114bdfb13a32e5377e480
+  languageName: node
+  linkType: hard
+
 "jsonfile@npm:^6.0.1":
   version: 6.1.0
   resolution: "jsonfile@npm:6.1.0"
@@ -18335,6 +18453,15 @@ __metadata:
   version: 6.0.3
   resolution: "kind-of@npm:6.0.3"
   checksum: 61cdff9623dabf3568b6445e93e31376bee1cdb93f8ba7033d86022c2a9b1791a1d9510e026e6465ebd701a6dd2f7b0808483ad8838341ac52f003f512e0b4c4
+  languageName: node
+  linkType: hard
+
+"klaw-sync@npm:^6.0.0":
+  version: 6.0.0
+  resolution: "klaw-sync@npm:6.0.0"
+  dependencies:
+    graceful-fs: ^4.1.11
+  checksum: 00d8e4c48d0d699b743b3b028e807295ea0b225caf6179f51029e19783a93ad8bb9bccde617d169659fbe99559d73fb35f796214de031d0023c26b906cecd70a
   languageName: node
   linkType: hard
 
@@ -20301,7 +20428,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"open@npm:7, open@npm:^7.0.3":
+"open@npm:7, open@npm:^7.0.3, open@npm:^7.4.2":
   version: 7.4.2
   resolution: "open@npm:7.4.2"
   dependencies:
@@ -20766,6 +20893,29 @@ __metadata:
   version: 0.1.1
   resolution: "pascalcase@npm:0.1.1"
   checksum: 48dfe90618e33810bf58211d8f39ad2c0262f19ad6354da1ba563935b5f429f36409a1fb9187c220328f7a4dc5969917f8e3e01ee089b5f1627b02aefe39567b
+  languageName: node
+  linkType: hard
+
+"patch-package@npm:^6.4.7":
+  version: 6.4.7
+  resolution: "patch-package@npm:6.4.7"
+  dependencies:
+    "@yarnpkg/lockfile": ^1.1.0
+    chalk: ^2.4.2
+    cross-spawn: ^6.0.5
+    find-yarn-workspace-root: ^2.0.0
+    fs-extra: ^7.0.1
+    is-ci: ^2.0.0
+    klaw-sync: ^6.0.0
+    minimist: ^1.2.0
+    open: ^7.4.2
+    rimraf: ^2.6.3
+    semver: ^5.6.0
+    slash: ^2.0.0
+    tmp: ^0.0.33
+  bin:
+    patch-package: index.js
+  checksum: fc5906dab7b4e5213be1aea36a825008d04da475c8f7b87e2b87579b5fca52927c200160f1f59a491b553db7e2a01427a1b3669bac5325e8b0d7e890241cbea0
   languageName: node
   linkType: hard
 
@@ -23279,7 +23429,10 @@ __metadata:
   dependencies:
     "@chakra-ui/icons": ^2.0.3
     "@redwoodjs/core": 2.0.0
+    "@sentry/react": ^7.6.0
+    "@sentry/tracing": ^7.6.0
     chakra-ui: ^0.3.9
+    patch-package: ^6.4.7
     react-html-parser: ^2.0.2
   languageName: unknown
   linkType: soft
@@ -25557,7 +25710,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:^1.0.0, tslib@npm:^1.8.1, tslib@npm:^1.9.0, tslib@npm:^1.9.2":
+"tslib@npm:^1.0.0, tslib@npm:^1.8.1, tslib@npm:^1.9.0, tslib@npm:^1.9.2, tslib@npm:^1.9.3":
   version: 1.14.1
   resolution: "tslib@npm:1.14.1"
   checksum: 69ae09c49eea644bc5ebe1bca4fa4cc2c82b7b3e02f43b84bd891504edf66dbc6b2ec0eef31a957042de2269139e4acff911e6d186a258fb14069cd7f6febce2
@@ -25986,7 +26139,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"universalify@npm:^0.1.2":
+"universalify@npm:^0.1.0, universalify@npm:^0.1.2":
   version: 0.1.2
   resolution: "universalify@npm:0.1.2"
   checksum: e70e0339f6b36f34c9816f6bf9662372bd241714dc77508d231d08386d94f2c4aa1ba1318614f92015f40d45aae1b9075cd30bd490efbe39387b60a76ca3f045

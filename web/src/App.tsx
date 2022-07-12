@@ -28,6 +28,8 @@ const ClerkAuthConsumer = withClerk(({ children, clerk }) => {
 })
 
 const ClerkAuthProvider = ({ children }) => {
+  console.log(process.env)
+
   const frontendApi = process.env.CLERK_FRONTEND_API_URL
   if (!frontendApi) {
     throw new Error('Need to define env variable CLERK_FRONTEND_API_URL')

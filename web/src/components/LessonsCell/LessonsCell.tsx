@@ -71,11 +71,5 @@ export const Success = ({ lessons }: CellSuccessProps<LessonsQuery>) => {
         </Tbody>
       </Table>
     </TableContainer>
-
-    // <UnorderedList pl={'1em'} pt={'1em'} listStyleType={'none'}>
-    //   {lessons.map((item) => {
-    //     return <ListItem key={item.id}>{item.name}</ListItem>
-    //   })}
-    // </UnorderedList>
   )
 }
