@@ -9,8 +9,10 @@ import {
   TableCaption,
   TableContainer,
 } from '@chakra-ui/react'
+import { Checkbox, CheckboxGroup } from '@chakra-ui/react'
 import type { LessonsQuery } from 'types/graphql'
 
+import { useAuth } from '@redwoodjs/auth'
 import type { CellSuccessProps, CellFailureProps } from '@redwoodjs/web'
 
 export const QUERY = gql`
@@ -21,6 +23,9 @@ export const QUERY = gql`
     }
   }
 `
+const updateLesson = (lessonId, userId) => {
+  console.log(lessonId, userId)
+}
 
 export const Loading = () => <div>Loading...</div>
 
@@ -31,22 +36,35 @@ export const Failure = ({ error }: CellFailureProps) => (
 )
 
 export const Success = ({ lessons }: CellSuccessProps<LessonsQuery>) => {
+  const { userMetadata } = useAuth()
+
   return (
     <TableContainer>
       <Table variant={'simple'}>
-        <TableCaption>Lessons Completed</TableCaption>
         <Thead>
           <Tr>
             <Th>Lesson Name</Th>
             <Th>Completed Date</Th>
-            <Th>Completed</Th>
+            <Th>Read Text</Th>
+            <Th>Watched Video</Th>
           </Tr>
         </Thead>
         <Tbody>
           {lessons.map((item) => {
             return (
               <Tr key={item.id}>
-                <Td>{item}</Td>
+                <Td>{item.name}</Td>
+                <Td>N/A</Td>
+                <Td>
+                  <Checkbox
+                    onChange={() => updateLesson(item.id, userMetadata.id)}
+                  />
+                </Td>
+                <Td>
+                  <Checkbox
+                    onChange={() => updateLesson(item.id, userMetadata.id)}
+                  />
+                </Td>
               </Tr>
             )
           })}

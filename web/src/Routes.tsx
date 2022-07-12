@@ -28,6 +28,7 @@ const Routes = () => {
         <Route notfound page={NotFoundPage} />
         <Route path="/login" page={SignInPage} name="signIn" />
         <Route path="/signup" page={SignUpPage} name="signUp" />
+        <Route path="/privacy" page={PrivacyPolicyPage} name="privacyPolicy" />
       </Set>
     </Router>
   )
