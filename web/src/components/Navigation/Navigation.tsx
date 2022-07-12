@@ -17,6 +17,9 @@ import {
   Stack,
 } from '@chakra-ui/react'
 
+import { useAuth } from '@redwoodjs/auth'
+import { navigate, routes } from '@redwoodjs/router'
+
 interface NavItem {
   text: string
   href: string
@@ -46,7 +49,7 @@ const NavLink = ({ text, href }: NavItem) => (
   </Link>
 )
 
-const AccountMenu = () => (
+const AccountMenu = ({ logOut }) => (
   <Menu>
     <MenuButton
       as={Button}
@@ -63,16 +66,16 @@ const AccountMenu = () => (
       />
     </MenuButton>
     <MenuList>
-      <MenuItem>Link 1</MenuItem>
-      <MenuItem>Link 2</MenuItem>
-      <MenuDivider />
-      <MenuItem>Link 3</MenuItem>
+      <MenuItem>Account</MenuItem>
+      <MenuItem onClick={logOut}>Sign Out</MenuItem>
     </MenuList>
   </Menu>
 )
 
 export default function Navigation() {
   const { isOpen, onOpen, onClose } = useDisclosure()
+
+  const { currentUser, isAuthenticated, logOut } = useAuth()
 
   return (
     <>
@@ -98,10 +101,24 @@ export default function Navigation() {
             </HStack>
           </HStack>
           <Flex alignItems={'center'}>
-            <Button variant={'solid'} colorScheme={'teal'} size={'sm'} mr={4}>
-              Sign Up
-            </Button>
-            <AccountMenu />
+            {!(isAuthenticated || currentUser) && (
+              <>
+                <Button
+                  variant={'solid'}
+                  colorScheme={'teal'}
+                  size={'sm'}
+                  mr={4}
+                  onClick={() => {
+                    navigate(routes.signUp())
+                  }}
+                >
+                  Sign Up
+                </Button>
+                <NavLink text="Sign In" href="/login" />
+              </>
+            )}
+
+            {isAuthenticated && currentUser && <AccountMenu logOut={logOut} />}
           </Flex>
         </Flex>
 

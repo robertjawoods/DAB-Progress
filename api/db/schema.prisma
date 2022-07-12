@@ -9,7 +9,8 @@ generator client {
 }
 
 model User {
-  id                  Int                   @id
+  id                  Int                   @id @default(autoincrement())
+  userId              String
   email               String                @unique
   LessonsCompleted    LessonsCompleted[]
   HomeworkCompleted   HomeworkCompleted[]
@@ -44,6 +45,8 @@ model LessonsCompleted {
   completionDate DateTime?
   userId         Int
   lessonId       Int
+
+  @@unique([lessonId, userId])
 }
 
 model HomeworkCompleted {
@@ -53,6 +56,8 @@ model HomeworkCompleted {
   lastCompletionDate DateTime?
   userId             Int
   homeworkId         Int
+
+  @@unique([homeworkId, userId])
 }
 
 model ChallengesCompleted {
@@ -62,4 +67,6 @@ model ChallengesCompleted {
   completedCount Int       @default(0)
   challengeId    Int
   userId         Int
+
+  @@unique([challengeId, userId])
 }

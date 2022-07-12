@@ -1,4 +1,5 @@
-import { Link, routes } from '@redwoodjs/router'
+import LessonsCell from 'web/src/components/LessonsCell/LessonsCell'
+
 import { MetaTags } from '@redwoodjs/web'
 
 const LessonsPage = () => {
@@ -6,14 +7,7 @@ const LessonsPage = () => {
     <>
       <MetaTags title="Lessons" description="Lessons page" />
 
-      <h1>LessonsPage</h1>
-      <p>
-        Find me in <code>./web/src/pages/LessonsPage/LessonsPage.tsx</code>
-      </p>
-      <p>
-        My default route is named <code>lessons</code>, link to me with `
-        <Link to={routes.lessons()}>Lessons</Link>`
-      </p>
+      <LessonsCell />
     </>
   )
 }
