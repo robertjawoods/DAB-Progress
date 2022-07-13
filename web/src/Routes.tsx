@@ -14,16 +14,16 @@ import MainLayout from './layouts/MainLayout/MainLayout'
 const Routes = () => {
   return (
     <Router>
-      <Set wrap={MainLayout}>
-        <Private unauthenticated="home">
-          <Route path="/fifty" page={FiftyPage} name="fifty" />
-          <Route path="/warmup" page={WarmupPage} name="warmup" />
-          <Route path="/challenges" page={ChallengesPage} name="challenges" />
-          <Route path="/lessons" page={LessonsPage} name="lessons" />
-          <Route path="/homework" page={HomeworkPage} name="homework" />
-          <Route path="/dashboard" page={DashboardPage} name="dashboard" />
-        </Private>
+      <Private unauthenticated="home" wrap={MainLayout}>
+        <Route path="/fifty" page={FiftyPage} name="fifty" />
+        <Route path="/warmup" page={WarmupPage} name="warmup" />
+        <Route path="/challenges" page={ChallengesPage} name="challenges" />
+        <Route path="/lessons" page={LessonsPage} name="lessons" />
+        <Route path="/homework" page={HomeworkPage} name="homework" />
+        <Route path="/dashboard" page={DashboardPage} name="dashboard" />
+      </Private>
 
+      <Set wrap={MainLayout}>
         <Route path="/" page={HomePage} name="home" />
         <Route notfound page={NotFoundPage} />
         <Route path="/login" page={SignInPage} name="signIn" />
