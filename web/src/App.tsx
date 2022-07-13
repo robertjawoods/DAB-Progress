@@ -28,8 +28,6 @@ const ClerkAuthConsumer = withClerk(({ children, clerk }) => {
 })
 
 const ClerkAuthProvider = ({ children }) => {
-  console.log(process.env.REDWOOD_ENV_CLERK_FRONTEND_API_URL)
-
   const frontendApi = process.env.REDWOOD_ENV_CLERK_FRONTEND_API_URL
   if (!frontendApi) {
     throw new Error('Need to define env variable CLERK_FRONTEND_API_URL')
